@@ -5,9 +5,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.EditText;
 
-public class MainActivity extends Activity {
+public class MainActivity extends Activity implements OnClickListener{
 
 	public final static String EXTRA_MESSAGE = "com.example.myfirstapp.MESSAGE";
 
@@ -15,6 +16,12 @@ public class MainActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+		
+		View buttonAbout = findViewById(R.id.button_about);
+		buttonAbout.setOnClickListener(this);
+		
+		View buttonSend = findViewById(R.id.button_send);
+		buttonSend.setOnClickListener(this);
 	}
 
 	@Override
@@ -25,11 +32,26 @@ public class MainActivity extends Activity {
 	}
 
 	public void sendMessage(View view) {
-		Intent intent = new Intent(this, DisplayMessageActivity.class);
-		EditText editText = (EditText) findViewById(R.id.edit_message);
-		String message = editText.getText().toString();
-		intent.putExtra(EXTRA_MESSAGE, message);
-		startActivity(intent);
+		
+	}
+
+	@Override
+	public void onClick(View v) {
+		Intent i;
+		
+		switch(v.getId()) {
+		case R.id.button_about:
+			i = new Intent(this, AboutActivity.class);
+			startActivity(i);
+			break;
+		case R.id.button_send:
+			i = new Intent(this, DisplayMessageActivity.class);
+			EditText editText = (EditText) findViewById(R.id.edit_message);
+			String message = editText.getText().toString();
+			i.putExtra(EXTRA_MESSAGE, message);
+			startActivity(i);
+			break;
+		}
 	}
 
 }

@@ -4,10 +4,18 @@
     <string name="app_name">My First App</string>
     <string name="action_settings">Settings</string>
     <string name="edit_message">Enter a message</string>
-    <string name="button_send">Send</string>    
+    <string name="button_send">Send</string>
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_display_message">My Message</string>
     <string name="button_about">About</string>
     <string name="button_exit">Exit</string>
+    <string name="title_activity_about">AboutActivity</string>
+    <string name="textview_about">\
+        Sudoku is a logic-based number placement puzzle.
+	Starting with a partially completed 9x9 grid, the
+	objective is to fill the grid so that each
+	row, each column, and each of the 3x3 boxes
+	(also called <i>blocks</i>) contains the digits
+	1 to 9 exactly once.</string>
 
 </resources>
