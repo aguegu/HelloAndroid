@@ -9,7 +9,7 @@
     <string name="title_activity_display_message">My Message</string>
     <string name="button_about">About</string>
     <string name="button_exit">Exit</string>
-    <string name="title_activity_about">AboutActivity</string>
+    <string name="title_activity_about">About</string>
     <string name="textview_about">\
         Sudoku is a logic-based number placement puzzle.
 	Starting with a partially completed 9x9 grid, the
