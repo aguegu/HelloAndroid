@@ -1,5 +1,6 @@
 package com.example.myfirstapp;
 
+import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.Intent;
@@ -11,6 +12,8 @@ import android.view.MenuItem;
 import android.widget.TextView;
 
 public class DisplayMessageActivity extends Activity {
+
+    @SuppressLint("NewApi")
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {

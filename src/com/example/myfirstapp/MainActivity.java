@@ -1,5 +1,6 @@
 package com.example.myfirstapp;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,6 +13,7 @@ public class MainActivity extends Activity implements OnClickListener{
 
 	public final static String EXTRA_MESSAGE = "com.example.myfirstapp.MESSAGE";
 
+    @SuppressLint("NewApi")
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -27,10 +29,11 @@ public class MainActivity extends Activity implements OnClickListener{
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.main, menu);
+		super.onCreateOptionsMenu(menu);
+		getMenuInflater().inflate(R.menu.menu, menu);
 		return true;
 	}
-
+	
 	public void sendMessage(View view) {
 		
 	}
