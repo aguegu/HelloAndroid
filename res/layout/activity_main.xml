@@ -28,6 +28,7 @@
         android:id="@+id/button_about"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center_vertical|right"
         android:text="@string/button_about" />
 
     <Button
